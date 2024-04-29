@@ -30,6 +30,9 @@ app.use(express.urlencoded({ extended: true })); // To parse form data in the re
 app.use(cookieParser());
 
 // Routes
+app.get("/",(req,res)=>{
+    res.send("API is running....");
+})
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/messages", messageRoutes);
